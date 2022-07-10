@@ -1,7 +1,6 @@
 import { Box, Badge, Text, Flex } from "@chakra-ui/react";
 import Image from "next/image";
-import ProjectImage from "components/assets/images/project.png";
-import type { NextComponentType } from "next";
+import ProjectImage from "components/assets/project.png";
 
 interface Project {
   image?: string;
