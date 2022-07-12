@@ -1,12 +1,15 @@
 import { Box, Flex, Text, Container } from "@chakra-ui/react";
 import type { NextComponentType } from "next";
+import { useRouter } from 'next/router'
 import ButtonComp from "components/button";
 import Image from "next/image";
 import HeaderImage from "components/assets/header-illustration.svg";
 
 const Header: NextComponentType = () => {
+  const router = useRouter();
+
   const handleSubmit = () => {
-    console.log("Clicking");
+    router.push("/contact");
   };
 
   const buttonObject = {

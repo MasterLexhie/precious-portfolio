@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.9.3",
     "@fontsource/montserrat": "^4.5.11",
     "@fontsource/tinos": "^4.5.8",
+    "formik": "^2.2.9",
     "framer-motion": "^6.4.1",
     "next": "12.2.0",
     "react": "18.2.0",

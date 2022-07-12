@@ -1,6 +1,7 @@
 import { Flex, Text, Container, Grid, GridItem } from "@chakra-ui/react";
-import ButtonComp from "components/button";
 import type { NextComponentType } from "next";
+import { useRouter } from 'next/router'
+import ButtonComp from "components/button";
 import ProjectCard from "./card";
 
 const project = [
@@ -34,8 +35,10 @@ const project = [
 ];
 
 const Projects: NextComponentType = () => {
+  const router = useRouter();
+
   const handleSubmit = () => {
-    console.log("Click working");
+    router.push("/project");
   };
 
   const gridItemStyle = {
