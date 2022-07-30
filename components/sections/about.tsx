@@ -8,13 +8,13 @@ const About: NextComponentType = () => {
         <Text
           size="xl"
           marginBottom={{ base: "12.5px", lg: "10px" }}
-          paddingLeft={{ base: "23px", lg: "unset" }}
+          // paddingLeft="23px"
         >
           About Me
         </Text>
         <Text
           variant="subTitle"
-          maxW={{ base: "320.48px", lg: "843px" }}
+          maxW={{ base: "unset", lg: "843px" }}
           alignSelf={{ base: "center", lg: "unset" }}
         >
           The long barrow was built on land previously inhabited in the

@@ -9,7 +9,11 @@ interface ButtonContent {
 }
 
 const ButtonComp = (props: ButtonContent) => {
-  return <Button {...props}>{props.title}</Button>;
+  return (
+    <Button {...props} whiteSpace="inherit">
+      {props.title}
+    </Button>
+  );
 };
 
 export default ButtonComp;

@@ -3,7 +3,8 @@ import type { NextComponentType } from "next";
 import { useRouter } from 'next/router'
 import ButtonComp from "components/button";
 import Image from "next/image";
-import HeaderImage from "components/assets/header-illustration.svg";
+// import HeaderImage from "components/assets/header-illustration.svg";
+import HeaderImage from "components/assets/precious-with-mac.png"
 
 const Header: NextComponentType = () => {
   const router = useRouter();

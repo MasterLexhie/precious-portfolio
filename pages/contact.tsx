@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import React from "react";
 import Head from "next/head";
 import { Field, Form, Formik } from "formik";
 import {
@@ -15,6 +16,7 @@ import {
 
 const ContactForm = () => {
   const toast = useToast();
+  const [loader, setLoader] = React.useState(false);
 
   const validate = (value: string) => {
     let error;
@@ -60,6 +62,8 @@ const ContactForm = () => {
       body: encode({ ...formData }),
     };
 
+    setLoader(true);
+
     fetch("https://formspree.io/f/xpzbgbbl", formProperty)
       .then(() => {
         action.setSubmitting(false);
@@ -72,16 +76,13 @@ const ContactForm = () => {
           isClosable: true,
         });
 
-        // resetting form after submit
-        // add loader to form
-
-        // action.resetForm({
-        //   values: {
-        //     name: "",
-        //     email: "",
-        //     message: "",
-        //   },
-        // });
+        action.resetForm({
+          values: {
+            name: "",
+            email: "",
+            message: "",
+          },
+        });
       })
       .catch(() => {
         toast({
@@ -93,16 +94,18 @@ const ContactForm = () => {
           isClosable: true,
         });
       })
-      .finally(() => console.log("Successfully"));
+      .finally(() => setLoader(false));
   };
 
   return (
     <Formik
       initialValues={{ name: "", email: "", message: "" }}
-      onSubmit={(values: any, actions: any) => handleSubmit(values, actions)}
+      onSubmit={(values: any, actions: any) => {
+        handleSubmit(values, actions);
+      }}
     >
       {(props) => (
-        <Form>
+        <Form onSubmit={props.handleSubmit}>
           <Flex flexFlow="column">
             <Field name="name" validate={validate}>
               {({ field, form }: any) => (
@@ -158,26 +161,10 @@ const ContactForm = () => {
                 </FormControl>
               )}
             </Field>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" isLoading={loader} loadingText="Submitting">
+              Submit
+            </Button>
           </Flex>
-          {/* <Field type="text" name="name" validate={validateNameOrMessage(props.values.name, "name")}>
-            {({ field, form }) => (
-              <FormControl isRequired isInvalid={form.errors.name && form.touched.name}>
-                <FormLabel htmlFor="name">Name</FormLabel>
-                <Input {...field} id="name" placeholder="name" />
-                <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field> */}
-          {/* <Field type="email" name="email" validate={validateEmail}>
-            {({ field, form }) => (
-              <FormControl isInvalid={form.errors.name && form.touched.name}>
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <Input {...field} id="email" placeholder="Email" />
-                <FormErrorMessage>{form.errors.email}</FormErrorMessage>
-              </FormControl>
-            )}x
-          </Field> */}
         </Form>
       )}
     </Formik>

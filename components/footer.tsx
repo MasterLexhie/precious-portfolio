@@ -9,36 +9,7 @@ const Footer = () => {
       p={{ base: "43px 24px", lg: "78px 138px" }}
     >
       <Flex justifyContent="space-evenly" gap="20px">
-        <NextLink href="/" passHref>
-          <Box as="a" width="38px" height="38px">
-            <svg
-              width="39"
-              height="38"
-              viewBox="0 0 39 38"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="19.748" cy="19.0518" r="18.8683" fill="#5222D0" />
-              <g clipPath="url(#clip0_303_1952)">
-                <path
-                  d="M31.5406 11.6813V26.4221C31.5406 27.2587 30.903 27.8962 30.0665 27.8962H28.5924V14.5182L19.7479 20.8715L10.9034 14.5182V27.8962H9.42934C8.5928 27.8962 7.95526 27.2587 7.95526 26.4221V11.6813C7.95526 11.2627 8.11299 10.8941 8.37759 10.6332C8.51539 10.4953 8.67951 10.3866 8.8602 10.3134C9.04088 10.2402 9.23443 10.2041 9.42934 10.2072H9.92095L19.7479 17.3322L29.5749 10.2072H30.0665C30.4851 10.2072 30.8537 10.3649 31.1183 10.6332C31.3829 10.8941 31.5406 11.2627 31.5406 11.6813Z"
-                  fill="#DBFFFF"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_303_1952">
-                  <rect
-                    width="23.5853"
-                    height="23.5853"
-                    fill="white"
-                    transform="translate(7.95508 7.25928)"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </Box>
-        </NextLink>
-        <NextLink href="/" passHref>
+        <NextLink href="https://github.com/MasterLexhie" passHref>
           <Box as="a" width="38px" height="38px">
             <svg
               width="39"
@@ -69,7 +40,7 @@ const Footer = () => {
             </svg>
           </Box>
         </NextLink>
-        <NextLink href="/" passHref>
+        <NextLink href="https://www.linkedin.com/in/precious-alexandra-kanu/" passHref>
           <Box as="a" width="38px" height="38px">
             <svg
               width="39"
