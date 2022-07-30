@@ -9,9 +9,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home | Precious</title>
+        <title>Precious A.Kanu | Home</title>
         <meta name="description" content="Portfolio of Precious" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/precious.png" />
       </Head>
       <Header />
       <About />

@@ -175,9 +175,9 @@ const Contact: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Contact | Precious</title>
+        <title>Precious A.Kanu | Contact Me</title>
         <meta name="description" content="Contact Precious" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/precious.png" />
       </Head>
       <Container>
         <ContactForm />
