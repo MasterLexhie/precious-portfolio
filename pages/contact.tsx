@@ -179,7 +179,7 @@ const Contact: NextPage = () => {
         <meta name="description" content="Contact Precious" />
         <link rel="icon" href="/precious.png" />
       </Head>
-      <Container>
+      <Container pt="3rem">
         <ContactForm />
       </Container>
     </>
