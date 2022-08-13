@@ -2,11 +2,13 @@ import type { NextPage } from "next";
 import { Container, Input, Text, Grid, GridItem } from "@chakra-ui/react";
 import ProjectCard from "components/sections/projects/card";
 import Head from "next/head";
+import tams from 'components/assets/tams.png';
+import traveljinni from 'components/assets/traveljinni.png';
 
 const project = [
   {
     id: 1,
-    image: null,
+    image: tams,
     title: "TAMS",
     tag: ["HTML", "CSS", "Javascript", "VueJs", "Element UI"],
     link: "https://tams.com.ng/",
@@ -22,7 +24,7 @@ const project = [
   },
   {
     id: 3,
-    image: null,
+    image: traveljinni,
     title: "Travel Jinni",
     tag: ["HTML", "CSS", "Javascript", "NextJs"],
     link: "https://traveljinni.com/",
