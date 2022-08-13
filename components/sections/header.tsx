@@ -3,7 +3,6 @@ import type { NextComponentType } from "next";
 import { useRouter } from 'next/router'
 import ButtonComp from "components/button";
 import Image from "next/image";
-// import HeaderImage from "components/assets/header-illustration.svg";
 import HeaderImage from "components/assets/precious-with-mac.png"
 
 const Header: NextComponentType = () => {
@@ -36,7 +35,7 @@ const Header: NextComponentType = () => {
             variant="title"
             marginBottom={{ base: "12.5px", lg: "10px" }}
           >
-            Developer
+            Software Developer
           </Text>
           <Text size="2xl" variant="header">
             Precious Alexandra Kanu

@@ -1,11 +1,12 @@
-import { Box, Badge, Text, Flex } from "@chakra-ui/react";
+import { Box, Badge, Text, Flex, Link } from "@chakra-ui/react";
 import Image from "next/image";
 import ProjectImage from "components/assets/project.png";
 
 interface Project {
-  image?: string;
+  image?: string | null;
   title: string;
   tag?: string[];
+  link: string;
   description: string;
 }
 
@@ -30,9 +31,9 @@ const badgeStyle = {
 
 const ProjectCard = (props: Project) => {
   return (
-    <>
+    <Link href={props.link} isExternal>
       <Box>
-        <Image src={ProjectImage} alt={"image of project"} layout="responsive" className="project-images" />
+        <Image src={ProjectImage || props.image} alt={"image of project"} layout="responsive" className="project-images" />
       </Box>
       <Box p={{ base: "16px 7px 19px 18px", lg: "29px 8px 31px 26px" }}>
         <Text textTransform="uppercase" {...titleStyle}>
@@ -47,7 +48,7 @@ const ProjectCard = (props: Project) => {
         </Flex>
         <Text>{props.description}</Text>
       </Box>
-    </>
+    </Link>
   );
 };
 
